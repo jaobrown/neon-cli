@@ -1,7 +1,7 @@
 const {Command, flags} = require('@oclif/command')
 const fs = require('fs')
+const {cli} = require('cli-ux')
 // const path = require('path')
-// const {cli} = require('cli-ux')
 
 class MakeCommand extends Command {
   async run() {
@@ -12,31 +12,44 @@ class MakeCommand extends Command {
     const folderName = `./src/components/${type}s/${name}`
 
     try {
+      cli.action.start('Making your component...')
+      await cli.wait(1000)
       if (!fs.existsSync(folderName)) {
         fs.mkdirSync(folderName)
       }
       if (!fs.existsSync(`${folderName}/${name}`)) {
-        fs.writeFile(`${folderName}/${name}.jsx`, 'Hello from a new component', 'utf8', err => {
-          if (err) throw err
-          // eslint-disable-next-line no-console
-          console.log(`${name} component created succesfully.`)
-        })
-        fs.writeFile(`${folderName}/${name}Styles.js`, 'Hello from a new component', 'utf8', err => {
-          if (err) throw err
-          // eslint-disable-next-line no-console
-          console.log(`${name} component styles created succesfully.`)
-        })
-        fs.appendFile(`./src/components/${type}s/index.js`, `export * from "./${name}/${name}"`, err => {
-          if (err) throw err
-          // eslint-disable-next-line no-console
-          this.log(`Exported ${name} from ${folderName} index.`)
-        })
+        fs.writeFile(
+          `${folderName}/${name}.jsx`,
+          'Hello from a new component',
+          'utf8',
+          err => {
+            if (err) throw err
+          }
+        )
+        fs.writeFile(
+          `${folderName}/${name}Styles.js`,
+          'Hello from a new component',
+          'utf8',
+          err => {
+            if (err) throw err
+          }
+        )
+        cli.action.stop('Done!')
+
+        cli.action.start(`Exporting your component from ${type}s index.`)
+        await cli.wait(750)
+        fs.appendFile(
+          `./src/components/${type}s/index.js`,
+          `\rexport * from "./${name}/${name}"`,
+          err => {
+            if (err) throw err
+          }
+        )
+        cli.action.stop('Nice!')
       }
     } catch (error) {
       this.log(error)
     }
-
-    this.log(`Neon made ${name}.jsx and ${name}Styles.js in the ${type}s directory`)
   }
 }
 

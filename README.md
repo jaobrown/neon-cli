@@ -19,7 +19,7 @@ $ npm install -g neon-cli
 $ neon COMMAND
 running command...
 $ neon (-v|--version|version)
-neon-cli/0.0.0 darwin-x64 node-v10.16.3
+neon-cli/0.0.1 darwin-x64 node-v10.16.3
 $ neon --help [COMMAND]
 USAGE
   $ neon COMMAND
@@ -48,7 +48,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/hello.js](https://github.com/jaobrown/neon-cli/blob/v0.0.0/src/commands/hello.js)_
+_See code: [src/commands/hello.js](https://github.com/jaobrown/neon-cli/blob/v0.0.1/src/commands/hello.js)_
 
 ## `neon help [COMMAND]`
 
@@ -69,19 +69,21 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3
 
 ## `neon make`
 
-Describe the command here
+Creates new components for neon
 
 ```
 USAGE
   $ neon make
 
 OPTIONS
-  -n, --name=name  name to print
+  -n, --name=name  name of new component
+  -t, --type=type  type of new component
 
 DESCRIPTION
   ...
-  Extra documentation goes here
+  With this command, you can create a new component in the appropriate directory.
+  Makes the right thing the easy thing.
 ```
 
-_See code: [src/commands/make.js](https://github.com/jaobrown/neon-cli/blob/v0.0.0/src/commands/make.js)_
+_See code: [src/commands/make.js](https://github.com/jaobrown/neon-cli/blob/v0.0.1/src/commands/make.js)_
 <!-- commandsstop -->
