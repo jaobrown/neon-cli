@@ -6,7 +6,7 @@
   "bin": {
     "neon": "./bin/run"
   },
-  "bugs": "https://github.com/jaobrown/neon-cli/issues",
+  "bugs": "https://bitbucket.org/jaobrown/neon-cli/src/master/",
   "dependencies": {
     "@oclif/command": "^1.5.19",
     "@oclif/config": "^1.13.3",
@@ -28,7 +28,7 @@
     "/oclif.manifest.json",
     "/src"
   ],
-  "homepage": "https://github.com/jaobrown/neon-cli",
+  "homepage": "https://bitbucket.org/jaobrown/neon-cli/src/master/",
   "keywords": [
     "oclif"
   ],
