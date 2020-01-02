@@ -4,16 +4,13 @@ neon-cli
 CLI Tool built for Element Three&#39;s Neon frontend
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-<!-- [![Version](https://img.shields.io/npm/v/neon-cli.svg)](https://npmjs.org/package/neon-cli)
-[![Downloads/week](https://img.shields.io/npm/dw/neon-cli.svg)](https://npmjs.org/package/neon-cli) -->
 [![License](https://img.shields.io/npm/l/neon-cli.svg)](https://github.com/jaobrown/neon-cli/blob/master/package.json)
 
-<!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
-<!-- tocstop -->
+
 # Usage
-<!-- usage -->
+
 ```sh-session
 $ npm install -g neon-cli
 $ neon COMMAND
@@ -25,9 +22,9 @@ USAGE
   $ neon COMMAND
 ...
 ```
-<!-- usagestop -->
+
 # Commands
-<!-- commands -->
+
 * [`neon help [COMMAND]`](#neon-help-command)
 * [`neon make`](#neon-make)
 
@@ -67,4 +64,3 @@ DESCRIPTION
 ```
 
 _See code: [src/commands/make.js](https://github.com/jaobrown/neon-cli/blob/v0.0.1/src/commands/make.js)_
-<!-- commandsstop -->
