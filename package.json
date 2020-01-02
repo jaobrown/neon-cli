@@ -1,7 +1,7 @@
 {
   "name": "neon-cli",
   "description": "CLI Tool built for Element Three's Neon frontend",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Jared Brown",
   "bin": {
     "neon": "./bin/run"
