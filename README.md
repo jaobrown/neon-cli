@@ -4,8 +4,8 @@ neon-cli
 CLI Tool built for Element Three&#39;s Neon frontend
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/neon-cli.svg)](https://npmjs.org/package/neon-cli)
-[![Downloads/week](https://img.shields.io/npm/dw/neon-cli.svg)](https://npmjs.org/package/neon-cli)
+<!-- [![Version](https://img.shields.io/npm/v/neon-cli.svg)](https://npmjs.org/package/neon-cli)
+[![Downloads/week](https://img.shields.io/npm/dw/neon-cli.svg)](https://npmjs.org/package/neon-cli) -->
 [![License](https://img.shields.io/npm/l/neon-cli.svg)](https://github.com/jaobrown/neon-cli/blob/master/package.json)
 
 <!-- toc -->
