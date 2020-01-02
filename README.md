@@ -1,7 +1,7 @@
 neon-cli
 ========
 
-CLI Tool built for Element Three&#39;s Neon frontend
+CLI Tool built for Element Three's Neon frontend
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![License](https://img.shields.io/npm/l/neon-cli.svg)](https://github.com/jaobrown/neon-cli/blob/master/package.json)
