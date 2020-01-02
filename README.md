@@ -28,27 +28,8 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`neon hello`](#neon-hello)
 * [`neon help [COMMAND]`](#neon-help-command)
 * [`neon make`](#neon-make)
-
-## `neon hello`
-
-Describe the command here
-
-```
-USAGE
-  $ neon hello
-
-OPTIONS
-  -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
-```
-
-_See code: [src/commands/hello.js](https://github.com/jaobrown/neon-cli/blob/v0.0.1/src/commands/hello.js)_
 
 ## `neon help [COMMAND]`
 

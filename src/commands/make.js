@@ -34,18 +34,18 @@ class MakeCommand extends Command {
             if (err) throw err
           }
         )
-        cli.action.stop('Done!')
+        cli.action.stop('👍')
 
         cli.action.start(`Exporting your component from ${type}s index.`)
         await cli.wait(750)
         fs.appendFile(
           `./src/components/${type}s/index.js`,
-          `\rexport * from "./${name}/${name}"`,
+          `\nexport * from "./${name}/${name}"`,
           err => {
             if (err) throw err
           }
         )
-        cli.action.stop('Nice!')
+        cli.action.stop('👍')
       }
     } catch (error) {
       this.log(error)
