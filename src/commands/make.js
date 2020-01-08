@@ -1,6 +1,8 @@
 const {Command, flags} = require('@oclif/command')
 const fs = require('fs')
 const {cli} = require('cli-ux')
+const {componentStylesTemplate} = require('../templates/component-styles')
+const {componentTemplate} = require('../templates/component')
 // const path = require('path')
 
 class MakeCommand extends Command {
@@ -20,7 +22,7 @@ class MakeCommand extends Command {
       if (!fs.existsSync(`${folderName}/${name}`)) {
         fs.writeFile(
           `${folderName}/${name}.jsx`,
-          'Hello from a new component',
+          componentTemplate(name),
           'utf8',
           err => {
             if (err) throw err
@@ -28,7 +30,7 @@ class MakeCommand extends Command {
         )
         fs.writeFile(
           `${folderName}/${name}Styles.js`,
-          'Hello from a new component',
+          componentStylesTemplate(name),
           'utf8',
           err => {
             if (err) throw err
@@ -53,8 +55,8 @@ class MakeCommand extends Command {
   }
 }
 
-MakeCommand.description = `Creates new components for neon
-...
+MakeCommand.description = `Creates new components for neon projects
+
 With this command, you can create a new component in the appropriate directory.
 Makes the right thing the easy thing.
 `
