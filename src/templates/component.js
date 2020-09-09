@@ -1,11 +1,12 @@
-exports.componentTemplate = name => `import React from 'react'
-import {${name}Element} from './${name}Styles'
+exports.componentTemplate = (name) => `import React from "react"
 
 export const ${name} = () => {
   return (
-    <${name}Element>
-      hello from ${name}
-    </${name}Element>
+    <section className="py-10">
+      <div className="container">
+        hello from ${name}!
+      </div>
+    </section>
   )
 }
 `
