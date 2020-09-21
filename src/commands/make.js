@@ -1,4 +1,4 @@
-const {Command, flags} = require('@oclif/command')
+const {Command} = require('@oclif/command')
 const fs = require('fs')
 const {cli} = require('cli-ux')
 const {componentTemplate} = require('../templates/component')
@@ -6,10 +6,9 @@ const {componentTemplate} = require('../templates/component')
 
 class MakeCommand extends Command {
   async run() {
-    const {flags} = this.parse(MakeCommand)
-    const name = flags.name || 'NewFile'
-    const type = flags.type || 'layout'
-
+    const {args} = this.parse(MakeCommand)
+    const type = args.type
+    const name = args.name
     const folderName = `./src/components/${type}s/${name}`
 
     try {
@@ -61,9 +60,19 @@ With this command, you can create a new component in the appropriate directory.
 Makes the right thing the easy thing.
 `
 
-MakeCommand.flags = {
-  type: flags.string({char: 't', description: 'type of new component'}),
-  name: flags.string({char: 'n', description: 'name of new component'}),
-}
+MakeCommand.args = [
+  {
+    name: 'type',
+    required: true,
+    description: 'The type of component.',
+    default: 'layout',
+  },
+  {
+    name: 'name',
+    required: true,
+    description: 'The name of component.',
+    default: 'NewFile',
+  },
+]
 
 module.exports = MakeCommand
