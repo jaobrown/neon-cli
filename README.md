@@ -51,11 +51,11 @@ Creates new components for neon
 
 ```
 USAGE
-  $ neon make
+  $ neon make TYPE NAME
 
-OPTIONS
-  -n, --name=name  name of new component
-  -t, --type=type  type of new component
+ARGUMENTS
+  TYPE  [default: layout] The type of component.
+  NAME  [default: NewFile] The name of component.
 
 DESCRIPTION
   ...
